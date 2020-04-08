@@ -12,20 +12,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final channelNameController = TextEditingController();
   bool validateError = false;
 
-  // Passes value to the next page and gets camera and microphone permission
-  // void submitInput() async{
-  //   if (userNameController.text.isEmpty || channelNameController.text.isEmpty){
-  //     return;
-  //   }
-  //   await _handleCameraAndMic();
-    
-  //   await Navigator.push(
-  //     context,
-  //     MaterialPageRoute(builder: (context) => CallPage(userNameController.text, channelNameController.text)
-  //     )
-  //   );
-  // }
-
   @override
   void dispose(){   
     channelNameController.dispose();
@@ -47,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Agora group calling', style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),),
+            Text('Agora Video Calling Demo', style: TextStyle(fontSize: 28, color: Colors.white, fontWeight: FontWeight.bold),),
             Padding(padding: EdgeInsets.symmetric(vertical: 20)),
             // Username
             Container(
