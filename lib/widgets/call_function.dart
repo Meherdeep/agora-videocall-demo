@@ -131,8 +131,8 @@ class _VideoCallState extends State<VideoCall> {
   /// Video view row wrapper
   Widget _localVideoView(view) {
     return Container(
-      height: 120,
-      width: 100,
+      height: 150,
+      width: 120,
       child: view,
     );
   }
