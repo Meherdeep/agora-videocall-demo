@@ -156,7 +156,6 @@ class _VideoCallState extends State<VideoCall> {
               top: 5,
               child: _localVideoView(views[0])
             )
-            
           ],
         ));
 
