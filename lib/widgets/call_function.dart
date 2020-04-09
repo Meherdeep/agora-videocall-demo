@@ -49,13 +49,13 @@ class _VideoCallState extends State<VideoCall> {
     await AgoraRtcEngine.joinChannel(null, widget.channelName, null, 0);
   }
 
-  /// Create agora sdk instance and initialize
+  /// Add agora sdk instance and initialize
   Future<void> _initAgoraRtcEngine() async {
     await AgoraRtcEngine.create(APP_ID);
     await AgoraRtcEngine.enableVideo();
   }
 
-  /// Add agora event handlers
+  /// agora event handlers
   void _addAgoraEventHandlers() {
     AgoraRtcEngine.onError = (dynamic code) {
       setState(() {
@@ -64,6 +64,7 @@ class _VideoCallState extends State<VideoCall> {
       });
     };
 
+    /// Use this function to obtain the uid of the person who joined the channel 
     AgoraRtcEngine.onJoinChannelSuccess = (
       String channel,
       int uid,
@@ -120,7 +121,7 @@ class _VideoCallState extends State<VideoCall> {
     return list;
   }
 
-  /// Video view wrapper
+  /// Remote video view wrapper
   Widget _videoView(view) {
     return Container(
       height: 651.4,
@@ -128,7 +129,7 @@ class _VideoCallState extends State<VideoCall> {
     );
   }
   
-  /// Video view row wrapper
+  /// Local video view row wrapper
   Widget _localVideoView(view) {
     return Container(
       height: 150,
