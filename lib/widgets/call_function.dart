@@ -146,20 +146,19 @@ class _VideoCallState extends State<VideoCall> {
         return Container(
             child: Column(
           children: <Widget>[_videoView(views[0])],
-        ));
+          )
+        );
       case 2:
         return Container(
             child: Stack(
           children: <Widget>[
             _videoView(views[1]),
-            Positioned(
-              right:5,
-              top: 5,
-              child: _localVideoView(views[0])
-            )
+            Align(
+              alignment: Alignment(0.95, -0.95),
+              child:_localVideoView(views[0])
+            ),
           ],
         ));
-
       default:
     }
     return Container();
