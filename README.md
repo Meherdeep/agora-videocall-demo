@@ -1,9 +1,3 @@
----
-noteId: "5c8527707bec11ea9550955353838666"
-tags: []
-
----
-
 # Agora 1 to 1 Video Calling Demo
 
 This tutorial describes how to create an Agora account and build a sample app with Agora using Flutter.
