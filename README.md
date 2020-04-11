@@ -4,9 +4,9 @@ This tutorial describes how to create an Agora account and build a sample app wi
 
 ## Prerequisites
 
-> Agora.io Developer Account
+> [Agora.io Developer Account](https://console.agora.io)
 
-    >> 1. Go to [console.agora.io](console.agora.io/) 
+    >> 1. Go to console.agora.io 
     >> 2. Create an account and navigate to project management tab
     >> 3. Create a new project and keep the generated app ID handy
 
