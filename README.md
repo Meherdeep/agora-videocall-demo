@@ -1,3 +1,9 @@
+---
+noteId: "90c246407bf011ea9550955353838666"
+tags: []
+
+---
+
 # Agora 1 to 1 Video Calling Demo
 
 This tutorial describes how to create an Agora account and build a sample app with Agora using Flutter.
@@ -5,6 +11,9 @@ This tutorial describes how to create an Agora account and build a sample app wi
 ## Prerequisites
 
 > Agora.io Developer Account
+    >> Go to [console.agora.io](console.agora.io/) 
+    >> Create an account and navigate to project management tab
+    >> Create a new project and keep the generated app ID handy  
  -- Go to [console.agora.io](console.agora.io/)
  -- Create an account and navigate to project management tab
  -- Create a new project and keep the generated app ID handy 
