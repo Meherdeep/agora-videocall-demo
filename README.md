@@ -5,12 +5,12 @@ This tutorial describes how to create an Agora account and build a sample app wi
 ## Prerequisites
 
 > Agora.io Developer Account
-	>> Go to [console.agora.io](console.agora.io/) 
-	>> Create an account and navigate to project management tab
-	>> Create a new project and keep the generated app ID handy 
+ -- Go to [console.agora.io](console.agora.io/)
+ -- Create an account and navigate to project management tab
+ -- Create a new project and keep the generated app ID handy 
 
 > Agora Flutter SDK 
-	>> https://github.com/AgoraIO/Flutter-SDK
+ -- https://github.com/AgoraIO/Flutter-SDK
 
 ## How to Run this code?
 
