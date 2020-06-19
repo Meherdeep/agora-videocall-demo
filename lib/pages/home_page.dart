@@ -150,7 +150,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
     if (channelNameController.text.isNotEmpty) {
       // await for camera and mic permissions before pushing video page
-      await _handleCameraAndMic();
+      await _handleCameraAndMic(Permission.camera);
+      await _handleCameraAndMic(Permission.microphone);
       // push video page with given channel name
       await Navigator.push(
         context,
@@ -161,9 +162,8 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Future<void> _handleCameraAndMic() async {
-    await PermissionHandler().requestPermissions(
-      [PermissionGroup.camera, PermissionGroup.microphone],
-    );
+Future<void> _handleCameraAndMic(Permission permission) async {
+    final status = await permission.request();
+    print(status);
   }
 }
