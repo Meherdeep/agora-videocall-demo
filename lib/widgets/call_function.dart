@@ -47,6 +47,7 @@ class _VideoCallState extends State<VideoCall> {
     await AgoraRtcEngine.setParameters(
         '''{\"che.video.lowBitRateStreamParameter\":{\"width\":320,\"height\":180,\"frameRate\":15,\"bitRate\":140}}''');
     await AgoraRtcEngine.joinChannel(null, widget.channelName, null, 0);
+  
   }
 
   /// Add agora sdk instance and initialize
