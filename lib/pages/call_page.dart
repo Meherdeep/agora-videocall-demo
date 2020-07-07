@@ -1,6 +1,11 @@
+import 'dart:ui';
+
 import 'package:agora_group_calling/widgets/app_bar.dart';
 import 'package:agora_group_calling/widgets/call_function.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:native_screenshot/native_screenshot.dart';
+
 
 class CallPage extends StatefulWidget {
   final String userName;
@@ -11,39 +16,47 @@ class CallPage extends StatefulWidget {
 }
 
 class _CallPageState extends State<CallPage> {
+  GlobalKey rootWidgetKey = GlobalKey();
   
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(132, 174, 0,0.5),
-        title: Text('Hi '+ widget.userName +'!'),
-        elevation: 10,
-        leading: CircleAvatar(
-          backgroundImage: AssetImage('assets/profile_pic.png'),
-            radius: 10,
-            backgroundColor: Color.fromRGBO(255, 104, 220, 1),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.image), 
-            onPressed: (){}
-          )
-        ],
-      ),
-      body: Stack(
-        // fit: StackFit.expand,
-        children: <Widget>[
-          VideoCall(widget.channelName),
-          Positioned(
-            bottom: 10,
-            left: 60,
-            child: StatusBar(),
+    return RepaintBoundary(
+      key: rootWidgetKey,
+          child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(132, 174, 0,0.5),
+          title: Text('Hi '+ widget.userName +'!'),
+          elevation: 10,
+          leading: CircleAvatar(
+            backgroundImage: AssetImage('assets/profile_pic.png'),
+              radius: 10,
+              backgroundColor: Color.fromRGBO(255, 104, 220, 1),
           ),
-        ],
-
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.image), 
+              onPressed: (){_capturePng();}
+            )
+          ],
+        ),
+        body: Stack(
+          // fit: StackFit.expand,
+          children: <Widget>[
+            VideoCall(widget.channelName),
+            Positioned(
+              bottom: 10,
+              left: 60,
+              child: StatusBar(),
+            ),
+          ],
+        ),
+        
       ),
-      
     );
   }
+  Future<void> _capturePng() async {
+    String path = await NativeScreenshot.takeScreenshot();
+    print(path);
+  }
+
 }
