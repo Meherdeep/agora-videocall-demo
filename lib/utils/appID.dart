@@ -1,1 +1,1 @@
-const APP_ID = '0e7ab4c911f3457da3f346f27f1c4684';
+const APP_ID = '';
